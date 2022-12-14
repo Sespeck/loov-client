@@ -18,7 +18,7 @@ Dec 10 2022
 ## Technologies
 Frontend: React.js, Tailwind CSS, Redux state management, Shazam Core API
 
-[Backend](https://github.com/Sespeck/harbor-backend): Express Server, MongoDB Atlas, Mongoose
+[Backend](https://github.com/Sespeck/loov-server): Express Server, MongoDB Atlas, Mongoose
 
 ## Screenshots
 

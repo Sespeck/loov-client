@@ -4,10 +4,7 @@ export const shazamCoreApi = createApi({
   reducerPath: 'shazamCoreApi',
   baseQuery: fetchBaseQuery({
     prepareHeaders: (headers) => {
-      headers.set(
-        'X-RapidAPI-Key',
-        '133678d879msh2349064b6294745p15ec65jsn37ec51172cfe'
-      );
+      headers.set('X-RapidAPI-Key', process.env.REACT_APP_SHAZAM_KEY);
       return headers;
     },
   }),

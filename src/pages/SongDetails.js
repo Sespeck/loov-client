@@ -112,26 +112,27 @@ const SongDetails = () => {
     updatePlaylists({ playlists: newPlaylists });
     openSnackBar(`${song.title} is REMOVED from ${playlist.name}`);
   };
+
   if (isFetchingRelatedSongs || isFetchingSongDetails)
     return <Loader title="Fetching song details ..." />;
   if (error) return <Error></Error>;
-  const updateSongPlaylist = (
-    <PlaylistModal
-      key={songData.key}
-      playlists={playlistsData.playlists}
-      song={songData}
-      handleAddPlaylist={handleAddPlaylist}
-      handleRemovePlaylist={handleRemovePlaylist}
-      isAddedPlaylist={playlistsData.playlistSongKeys.includes(
-        songData.key.toString()
-      )}
-    />
-  );
 
   if (!loggedInToken) {
     alert('Not authenticated, redirect to log in.');
     return <Navigate replace to="/login" />;
   } else {
+    const updateSongPlaylist = (
+      <PlaylistModal
+        key={songData.key}
+        playlists={playlistsData.playlists}
+        song={songData}
+        handleAddPlaylist={handleAddPlaylist}
+        handleRemovePlaylist={handleRemovePlaylist}
+        isAddedPlaylist={playlistsData.playlistSongKeys.includes(
+          songData.key.toString()
+        )}
+      />
+    );
     return (
       <div className="flex flex-col rounded-lg">
         {customSnackBar({ openBar, setOpenBar, snackBarMessage })}

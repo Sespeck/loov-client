@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 
 export default class Login extends Component {
   constructor(props) {
@@ -102,13 +103,12 @@ export default class Login extends Component {
               <p className="block mb-2 mr-2 text-sm font-medium text-gray-300 dark:text-white">
                 New user?
               </p>
-
-              <a
-                href="/signup"
-                className="block mb-2 text-sm font-bold text-[#5d8cf1] dark:text-white hover:cursor pointer"
+              <Link
+                className=" block mb-2 text-sm font-bold text-[#5d8cf1] dark:text-white hover:cursor pointer"
+                to="/signup"
               >
                 Sign Up
-              </a>
+              </Link>
             </div>
           </div>
         </form>

@@ -1,7 +1,7 @@
 // Run 'npx eslint . --fix' to remove all unused imports from th project library
 
 import { useSelector } from 'react-redux';
-import { Navigate, Route, Routes } from 'react-router-dom';
+import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom';
 import { logo } from './assets';
 import { useState } from 'react';
 import { Sidebar, MusicPlayer } from './components';

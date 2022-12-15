@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 
 export default class SignUp extends Component {
   constructor(props) {
@@ -164,12 +165,12 @@ export default class SignUp extends Component {
                 Already have an account?
               </p>
 
-              <a
-                href="/login"
-                className="block mb-2 text-sm font-bold text-[#5d8cf1] dark:text-white hover:cursor pointer"
+              <Link
+                className=" block mb-2 text-sm font-bold text-[#5d8cf1] dark:text-white hover:cursor pointer"
+                to="/login"
               >
                 Log in
-              </a>
+              </Link>
             </div>
           </div>
         </form>

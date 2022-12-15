@@ -1,5 +1,5 @@
 export const updateProfile = async ({ fname, lname, avatarFile }) => {
-  fetch('http://localhost:5001/update-profile', {
+  fetch('/update-profile', {
     method: 'POST',
     crossDomain: true,
     headers: {
@@ -26,7 +26,7 @@ export const updateProfile = async ({ fname, lname, avatarFile }) => {
 };
 
 export const updateRecentlyPlayed = async ({ recentlyPlayed }) => {
-  fetch('http://localhost:5001/update-recently-played', {
+  fetch('/update-recently-played', {
     method: 'POST',
     crossDomain: true,
     headers: {
@@ -50,7 +50,7 @@ export const updateRecentlyPlayed = async ({ recentlyPlayed }) => {
 };
 
 export const updatePlaylists = async ({ playlists }) => {
-  fetch('http://localhost:5001/update-playlists', {
+  fetch('/update-playlists', {
     method: 'POST',
     crossDomain: true,
     headers: {
@@ -74,7 +74,7 @@ export const updatePlaylists = async ({ playlists }) => {
 };
 
 export const getAllUsers = async () => {
-  return fetch('http://localhost:5001/get-users', {
+  return fetch('/get-users', {
     method: 'POST',
     crossDomain: true,
     headers: {
@@ -89,7 +89,7 @@ export const getAllUsers = async () => {
 };
 
 export const deleteUser = async ({ userId }) => {
-  return fetch('http://localhost:5001/delete-user', {
+  return fetch('/delete-user', {
     method: 'POST',
     crossDomain: true,
     headers: {
@@ -111,7 +111,7 @@ export const editUser = async ({
   avatarFile,
   userType,
 }) => {
-  return fetch('http://localhost:5001/edit-user', {
+  return fetch('/edit-user', {
     method: 'POST',
     crossDomain: true,
     headers: {

@@ -1,5 +1,5 @@
 export const updateFavoriteSongs = async ({ songList }) => {
-  fetch('http://localhost:5001/update-songs', {
+  fetch('/update-songs', {
     method: 'POST',
     crossDomain: true,
     headers: {
@@ -26,7 +26,7 @@ export const updateFavoriteSongs = async ({ songList }) => {
 };
 
 export const updateFavoriteArtists = async ({ artistList }) => {
-  fetch('http://localhost:5001/update-artists', {
+  fetch('/update-artists', {
     method: 'POST',
     crossDomain: true,
     headers: {
